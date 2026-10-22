@@ -63,11 +63,23 @@ export default function Hero({ lang = 'en', translations, onOpenDemo }) {
   return (
     <section className="relative min-h-screen-dvh pt-28 pb-16 md:pt-36 md:pb-24 flex items-center bg-[#FAF7EE] border-b-3 border-neo-black overflow-hidden">
       
+      {/* Background Video & Tint Overlay */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        className="absolute inset-0 w-full h-full object-cover object-center z-0 pointer-events-none"
+        src="/hero.mp4"
+      />
+      <div className="absolute inset-0 bg-[#FAF7EE]/80 backdrop-blur-[1.5px] z-0 pointer-events-none" />
+
       {/* Playful Neo-Brutalist decorative geometric badges in background */}
-      <div className="absolute top-24 right-10 hidden lg:block neo-badge bg-neo-yellow text-neo-black px-4 py-2 rounded-xl rotate-6 pointer-events-none select-none z-0">
+      <div className="absolute top-24 right-10 hidden lg:block neo-badge bg-neo-yellow text-neo-black px-4 py-2 rounded-xl rotate-6 pointer-events-none select-none z-[1]">
         💌 100% WhatsApp Ready!
       </div>
-      <div className="absolute bottom-16 left-6 hidden lg:block neo-badge bg-neo-pink text-neo-black px-4 py-2 rounded-xl -rotate-3 pointer-events-none select-none z-0">
+      <div className="absolute bottom-16 left-6 hidden lg:block neo-badge bg-neo-pink text-neo-black px-4 py-2 rounded-xl -rotate-3 pointer-events-none select-none z-[1]">
         🇱🇰 Handcrafted in Sri Lanka
       </div>
 
