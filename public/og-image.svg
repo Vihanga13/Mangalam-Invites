@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E352B"/>
+      <stop offset="50%" stop-color="#2D4A3E"/>
+      <stop offset="100%" stop-color="#182721"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4ECE0"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#A7811B"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- Decorative border -->
+  <rect x="40" y="40" width="1120" height="550" rx="16" fill="none" stroke="#C5A059" stroke-width="2" opacity="0.4"/>
+  <rect x="52" y="52" width="1096" height="526" rx="12" fill="none" stroke="#C5A059" stroke-width="1" opacity="0.25" stroke-dasharray="6 6"/>
+
+  <!-- Corner ornaments -->
+  <circle cx="52" cy="52" r="8" fill="#C5A059" opacity="0.8"/>
+  <circle cx="1148" cy="52" r="8" fill="#C5A059" opacity="0.8"/>
+  <circle cx="52" cy="578" r="8" fill="#C5A059" opacity="0.8"/>
+  <circle cx="1148" cy="578" r="8" fill="#C5A059" opacity="0.8"/>
+
+  <!-- Center Auspicious Emblem -->
+  <g transform="translate(600, 160) scale(1.6)">
+    <circle cx="0" cy="0" r="32" fill="#3D654D" opacity="0.6"/>
+    <!-- Lotus Flame -->
+    <path d="M0 -22 C0 -22 6 -8 6 0 C6 3.3 3.3 6 0 6 C-3.3 6 -6 3.3 -6 0 C-6 -8 0 -22 0 -22Z" fill="#D4AF37"/>
+    <path d="M0 4 C-8 4 -16 10 -16 18 C-16 24 -8 28 0 28 C8 28 16 24 16 18 C16 10 8 4 0 4Z" fill="#C5A059"/>
+    <path d="M-6 28 H6 L8 34 H-8 Z" fill="#A7811B"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="600" y="290" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="76" font-weight="700" fill="url(#goldGrad)" letter-spacing="2">Mangalam</text>
+  <text x="600" y="340" text-anchor="middle" font-family="'Inter', sans-serif" font-size="22" font-weight="600" fill="#EAE2D5" letter-spacing="12">INVITES</text>
+
+  <text x="600" y="420" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-style="italic" font-size="34" fill="#FAF8F5">
+    Auspicious Invitations, Beautifully Digital
+  </text>
+
+  <text x="600" y="480" text-anchor="middle" font-family="'Inter', sans-serif" font-size="20" fill="#C9DCD0">
+    Custom Digital Wedding Websites in Sri Lanka • WhatsApp RSVP • Interactive Maps
+  </text>
+  
+  <rect x="460" y="515" width="280" height="42" rx="21" fill="#7A1C2C"/>
+  <text x="600" y="542" text-anchor="middle" font-family="'Inter', sans-serif" font-size="16" font-weight="600" fill="#FFFDF9" letter-spacing="1">
+    Starting from LKR 8,000
+  </text>
+</svg>

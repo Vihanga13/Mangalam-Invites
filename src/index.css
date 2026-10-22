@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-neo-bg: #FAF7EE;
+  --color-neo-black: #121212;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  min-height: 100dvh;
+  overflow-x: hidden;
+  background-color: #FAF7EE;
+  color: #121212;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+/* 44px minimum tap target for all interactive elements */
+button, 
+a, 
+input, 
+select, 
+textarea,
+label[for],
+.touch-target {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Reduced motion media query */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Neo-Brutalist Core Component Utilities */
+.neo-box {
+  border: 2px solid #121212;
+  box-shadow: 4px 4px 0px #121212;
+}
+
+.neo-box-sm {
+  border: 2px solid #121212;
+  box-shadow: 2px 2px 0px #121212;
+}
+
+.neo-box-lg {
+  border: 2.5px solid #121212;
+  box-shadow: 6px 6px 0px #121212;
+}
+
+.neo-box-xl {
+  border: 3px solid #121212;
+  box-shadow: 8px 8px 0px #121212;
+}
+
+/* Tactile button that physically depresses when clicked */
+.neo-btn {
+  border: 2px solid #121212;
+  box-shadow: 4px 4px 0px #121212;
+  transition: transform 0.12s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.12s cubic-bezier(0.2, 0, 0, 1);
+  user-select: none;
+}
+
+.neo-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0px #121212;
+}
+
+.neo-btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0px #121212;
+}
+
+/* Small tactile button */
+.neo-btn-sm {
+  border: 2px solid #121212;
+  box-shadow: 3px 3px 0px #121212;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.neo-btn-sm:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #121212;
+}
+
+.neo-btn-sm:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #121212;
+}
+
+/* Neo-Brutalist Sticker Badge */
+.neo-badge {
+  border: 2px solid #121212;
+  box-shadow: 2.5px 2.5px 0px #121212;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Neo-Brutalist Input */
+.neo-input {
+  border: 2px solid #121212;
+  box-shadow: 3px 3px 0px #121212;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  background-color: #FFFFFF;
+}
+
+.neo-input:focus {
+  outline: none;
+  box-shadow: 5px 5px 0px #121212;
+  transform: translate(-1px, -1px);
+}
+
+/* Neo-Brutalist Card */
+.neo-card {
+  border: 2.5px solid #121212;
+  box-shadow: 5px 5px 0px #121212;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.neo-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0px #121212;
+}
+
+/* Phone Mockup in Neo-Brutalism */
+.phone-mockup-neo {
+  border: 3.5px solid #121212;
+  border-radius: 40px;
+  box-shadow: 8px 8px 0px #121212;
+  position: relative;
+  overflow: hidden;
+  background: #FAF7EE;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7EE;
+  border-left: 2px solid #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FACC15;
+  border: 2px solid #121212;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #EAB308;
+}
