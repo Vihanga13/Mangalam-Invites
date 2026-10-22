@@ -22,7 +22,7 @@ export default function WhyDigital({ lang = 'en', translations }) {
     {
       feature: lang === 'si' ? 'මුදල් වැයවීම' : 'Average Cost',
       paper: 'LKR 80,000 – 150,000+',
-      digital: 'LKR 8,000 – 35,000',
+      digital: 'LKR 5,000 – 10,000',
       winner: 'digital'
     },
     {

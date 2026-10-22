@@ -81,22 +81,22 @@ To protect intellectual property from competitors and preserve couples' privacy:
 
 | # | Design Name | Category | Price Range (LKR) | Key Highlights |
 |---|---|---|---|---|
-| 01 | **Single-Card Minimal** | Minimal | LKR 8,000 – 12,000 | Clean typographic layout, fast 1-second load, WhatsApp RSVP |
-| 02 | **Classic Scroll Story** | Classic | LKR 10,000 – 15,000 | Love story timeline, photo moments, elegant serif typography |
-| 03 | **Timeline / Itinerary** | Modern | LKR 12,000 – 18,000 | Multi-event schedule (Poruwa, Church, Reception, Afterparty) |
-| 04 | **Tabbed Swipe Cards** | Modern | LKR 15,000 – 22,000 | Mobile app-like card swipe interface, zero scrolling needed |
-| 05 | **Watercolor Botanical** | Creative | LKR 18,000 – 25,000 | Handcrafted Sri Lankan tropical botanicals, gold foil accents |
-| 06 | **Art Deco Gold** | Classic | LKR 18,000 – 25,000 | Great Gatsby luxury, obsidian & velvet emerald, gold shimmer |
-| 07 | **Magazine Cover** | Creative | LKR 18,000 – 28,000 | High-fashion Vogue editorial layout, couple interview story |
-| 08 | **Boarding Pass** | Creative | LKR 18,000 – 28,000 | Airline ticket theme with flight gate info for destination weddings |
-| 09 | **Photo-First Gallery** | Modern | LKR 20,000 – 30,000 | Cinematic full-screen hero slideshow, HD engagement reels |
-| 10 | **Polaroid Scrapbook** | Creative | LKR 22,000 – 32,000 | Nostalgic polaroids, washi tape, kraft paper textures |
-| 11 | **Envelope Opener** | Classic | LKR 25,000 – 35,000 | 3D wax seal break animation, virtual embossed letter reveal |
-| 12 | **Cultural / Traditional (Trilingual)** | Traditional | LKR 30,000 – 45,000 | Liyawel & Hansa Puttuwa motifs, Sinhala/Tamil/English scripts |
-| 13 | **Celestial Night Sky** | Creative | LKR 30,000 – 45,000 | Dynamic stardust, constellations mapped to your wedding night |
-| 14 | **Ola Leaf Manuscript** | Traditional | LKR 35,000 – 50,000 | Authentic ancient Talipot palm leaf simulation with wood covers |
-| 15 | **Storybook Page-Flip** | Creative | LKR 35,000 – 50,000 | Realistic 3D turnable hardcover fairy-tale wedding book |
-| 16 | **Playful Neo-Brutalist** | Creative | LKR 20,000 – 30,000 | Energetic pop art, hard drop-shadows, tactile button depression |
+| 01 | **Single-Card Minimal** | Minimal | LKR 5,000 – 6,500 | Clean typographic layout, fast 1-second load, WhatsApp RSVP |
+| 02 | **Classic Scroll Story** | Classic | LKR 5,500 – 7,000 | Love story timeline, photo moments, elegant serif typography |
+| 03 | **Timeline / Itinerary** | Modern | LKR 6,000 – 7,500 | Multi-event schedule (Poruwa, Church, Reception, Afterparty) |
+| 04 | **Tabbed Swipe Cards** | Modern | LKR 6,500 – 8,000 | Mobile app-like card swipe interface, zero scrolling needed |
+| 05 | **Watercolor Botanical** | Creative | LKR 7,000 – 8,500 | Handcrafted Sri Lankan tropical botanicals, gold foil accents |
+| 06 | **Art Deco Gold** | Classic | LKR 7,000 – 8,500 | Great Gatsby luxury, obsidian & velvet emerald, gold shimmer |
+| 07 | **Magazine Cover** | Creative | LKR 7,500 – 9,000 | High-fashion Vogue editorial layout, couple interview story |
+| 08 | **Boarding Pass** | Creative | LKR 7,500 – 9,000 | Airline ticket theme with flight gate info for destination weddings |
+| 09 | **Photo-First Gallery** | Modern | LKR 8,000 – 9,500 | Cinematic full-screen hero slideshow, HD engagement reels |
+| 10 | **Polaroid Scrapbook** | Creative | LKR 8,000 – 9,500 | Nostalgic polaroids, washi tape, kraft paper textures |
+| 11 | **Envelope Opener** | Classic | LKR 8,500 – 10,000 | 3D wax seal break animation, virtual embossed letter reveal |
+| 12 | **Cultural / Traditional (Trilingual)** | Traditional | LKR 8,500 – 10,000 | Liyawel & Hansa Puttuwa motifs, Sinhala/Tamil/English scripts |
+| 13 | **Celestial Night Sky** | Creative | LKR 8,500 – 10,000 | Dynamic stardust, constellations mapped to your wedding night |
+| 14 | **Ola Leaf Manuscript** | Traditional | LKR 9,000 – 10,000 | Authentic ancient Talipot palm leaf simulation with wood covers |
+| 15 | **Storybook Page-Flip** | Creative | LKR 9,000 – 10,000 | Realistic 3D turnable hardcover fairy-tale wedding book |
+| 16 | **Playful Neo-Brutalist** | Creative | LKR 7,000 – 8,500 | Energetic pop art, hard drop-shadows, tactile button depression |
 
 ---
 
