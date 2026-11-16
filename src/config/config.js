@@ -4,8 +4,8 @@ export const TAGLINE = "Auspicious invitations, beautifully digital.";
 export const TAGLINE_SI = "මංගල ආරාධනා, ඩිජිටල් අලංකාරයෙන්.";
 
 // Replace with your active business WhatsApp number (include country code without + or leading zeros)
-// Example for Sri Lanka: 94771234567
-export const WHATSAPP_NUMBER = "94771234567";
+// Example for Sri Lanka: 94711452682
+export const WHATSAPP_NUMBER = "94711452682";
 
 export const SOCIAL_LINKS = {
   whatsapp: `https://wa.me/${WHATSAPP_NUMBER}`,
@@ -13,7 +13,7 @@ export const SOCIAL_LINKS = {
   instagramHandle: "@mangalam.invites",
   facebook: "https://facebook.com/mangalaminvites",
   email: "hello@mangalaminvites.com",
-  phoneDisplay: "+94 77 123 4567",
+  phoneDisplay: "+94 71 145 2682",
 };
 
 /**
