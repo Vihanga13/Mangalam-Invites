@@ -9,10 +9,8 @@ export default function Navbar({ lang = 'en', setLang, translations }) {
 
   const navLinks = [
     { href: '#designs', label: t.designs },
-    { href: '#why-digital', label: t.whyDigital },
-    { href: '#how-it-works', label: t.howItWorks },
     { href: '#features', label: t.features },
-    { href: '#reviews', label: t.reviews },
+    { href: '#calculator', label: t.calculator },
     { href: '#faq', label: t.faq },
   ];
 

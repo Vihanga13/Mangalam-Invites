@@ -11,8 +11,8 @@ export const SOCIAL_LINKS = {
   whatsapp: `https://wa.me/${WHATSAPP_NUMBER}`,
   instagram: "https://instagram.com/mangalam.invites",
   instagramHandle: "@mangalam.invites",
-  facebook: "https://facebook.com/mangalaminvites",
-  email: "hello@mangalaminvites.com",
+  facebook: "https://www.facebook.com/share/1a6wzDPywN/?mibextid=wwXIfr",
+  email: "hello.mangalaminvites@gmail.com",
   phoneDisplay: "+94 71 145 2682",
 };
 

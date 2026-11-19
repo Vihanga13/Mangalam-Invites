@@ -2,10 +2,8 @@ export const translations = {
   en: {
     nav: {
       designs: 'Wedding Themes',
-      whyDigital: 'Why Go Digital',
-      howItWorks: 'How It Works',
       features: 'Features',
-      reviews: 'Reviews',
+      calculator: 'Pricing Calculator',
       faq: 'FAQ',
       inquire: 'Inquire on WhatsApp',
     },
@@ -60,6 +58,8 @@ export const translations = {
       inquireBtn: 'Inquire on WhatsApp',
       featuresTitle: 'Key Features:',
       all: 'All Designs',
+      seeMore: 'See More Themes',
+      showLess: 'Show Less',
       protectedBadge: 'Protected Bespoke Designs',
       protectedNotice: 'To protect proprietary designs and clients’ privacy, live interactive demos are shared privately on WhatsApp.'
     },
@@ -108,7 +108,7 @@ export const translations = {
     calculator: {
       badge: 'Instant LKR Cost Calculator & Inquiry',
       title: 'Customize Your Digital Wedding Invitation Package',
-      subtitle: 'Calculate an instant estimated quote in Sri Lankan Rupees (LKR). Choose your preferred design theme, package tier, and custom add-ons like Sinhala/Tamil translation or custom domains, then tap to connect directly with our studio on WhatsApp!',
+      subtitle: 'Calculate an instant estimated quote in Sri Lankan Rupees (LKR). Choose your preferred design theme and package tier, then tap to connect directly with our studio on WhatsApp!',
       namesLabel: 'Couple Names (e.g. Kasun & Sanduni)',
       namesPlaceholder: 'Groom & Bride names',
       dateLabel: 'Wedding Date',
@@ -133,10 +133,8 @@ export const translations = {
   si: {
     nav: {
       designs: 'මංගල මෝස්තර',
-      whyDigital: 'ඇයි ඩිජිටල්?',
-      howItWorks: 'ක්‍රියාකාරීත්වය',
       features: 'තාක්ෂණික අංග',
-      reviews: 'පාරිභෝගික අදහස්',
+      calculator: 'මිල ගණනය',
       faq: 'නිතර අසන ප්‍රශ්න',
       inquire: 'WhatsApp අමතන්න',
     },
@@ -191,6 +189,8 @@ export const translations = {
       inquireBtn: 'WhatsApp විමසන්න',
       featuresTitle: 'ප්‍රධාන අංග:',
       all: 'සියලුම නිර්මාණ',
+      seeMore: 'තවත් තේමාවන් බලන්න',
+      showLess: 'අඩුවෙන් පෙන්වන්න',
       protectedBadge: 'ආරක්ෂිත සුවිශේෂී නිර්මාණ',
       protectedNotice: 'අපගේ නිර්මාණ පිටපත් කිරීම වැලැක්වීමට සහ රහස්‍යභාවය රැකගැනීමට, සජීවී ආදර්ශන සබැඳි WhatsApp මඟින් පමණක් ලබාදෙනු ලැබේ.'
     },
@@ -239,7 +239,7 @@ export const translations = {
     calculator: {
       badge: 'ක්ෂණික මිල ගණනය සහ ඇණවුම',
       title: 'ඔබේ ඩිජිටල් මංගල ආරාධනා පැකේජය සකසා ගන්න',
-      subtitle: 'ඔබ කැමති තේමාව, පැකේජය සහ අමතර අංග තෝරා ක්ෂණික මුළු ඇස්තමේන්තුව ලබාගෙන WhatsApp හරහා අපට එවන්න!',
+      subtitle: 'ඔබ කැමති තේමාව සහ පැකේජය තෝරා ක්ෂණික මුළු ඇස්තමේන්තුව ලබාගෙන WhatsApp හරහා අපට එවන්න!',
       namesLabel: 'මනාලයා සහ මනාලියගේ නම්',
       namesPlaceholder: 'උදා: කසුන් සහ සඳුනි',
       dateLabel: 'මංගල දිනය',

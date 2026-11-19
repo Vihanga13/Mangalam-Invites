@@ -1,15 +1,42 @@
 import React, { useState } from 'react';
-import { Eye, MessageCircle, Check, Zap, Lock, ShieldCheck } from 'lucide-react';
+import { ChevronDown, ChevronUp, MessageCircle, Check, Zap, Lock, ShieldCheck } from 'lucide-react';
 import { CATEGORIES, DESIGNS } from '../config/designs';
 import { getWhatsAppUrl } from '../config/config';
 
 export default function DesignGallery({ lang = 'en', translations, onOpenDemo }) {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [showAll, setShowAll] = useState(false);
   const t = translations[lang].gallery;
 
   const filteredDesigns = selectedCategory === 'all'
     ? DESIGNS
     : DESIGNS.filter(d => d.category === selectedCategory);
+
+  const displayedDesigns = showAll ? filteredDesigns : filteredDesigns.slice(0, 6);
+  const hasMore = filteredDesigns.length > 6;
+
+  const handleCategoryChange = (catId) => {
+    setSelectedCategory(catId);
+    setShowAll(false);
+  };
+
+  const handleToggleShowAll = () => {
+    if (showAll) {
+      setShowAll(false);
+      const el = document.getElementById('designs');
+      if (el) {
+        const topOffset = 85;
+        const elementPosition = el.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - topOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    } else {
+      setShowAll(true);
+    }
+  };
 
   const getInquireLink = (design) => {
     const text = lang === 'si'
@@ -52,7 +79,7 @@ export default function DesignGallery({ lang = 'en', translations, onOpenDemo })
               <button
                 key={cat.id}
                 type="button"
-                onClick={() => setSelectedCategory(cat.id)}
+                onClick={() => handleCategoryChange(cat.id)}
                 className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold uppercase whitespace-nowrap transition-all touch-target ${
                   isSelected
                     ? 'bg-neo-yellow text-neo-black border-2 border-neo-black shadow-neo-sm translate-x-0.5 translate-y-0.5'
@@ -69,14 +96,18 @@ export default function DesignGallery({ lang = 'en', translations, onOpenDemo })
         <div className="mt-4 text-center">
           <span className="neo-badge bg-white text-neo-black px-3 py-1 rounded-lg text-[11px]">
             {lang === 'si' 
-              ? `නිර්මාණ ${filteredDesigns.length} ක් ප්‍රදර්ශනය කෙරේ` 
-              : `Showing ${filteredDesigns.length} bespoke invitation themes`}
+              ? (showAll || filteredDesigns.length <= 6
+                  ? `නිර්මාණ ${filteredDesigns.length} ක් ප්‍රදර්ශනය කෙරේ` 
+                  : `නිර්මාණ ${filteredDesigns.length} න් මුල් 6 ක් ප්‍රදර්ශනය කෙරේ`)
+              : (showAll || filteredDesigns.length <= 6
+                  ? `Showing ${filteredDesigns.length} bespoke invitation themes` 
+                  : `Showing 6 of ${filteredDesigns.length} bespoke invitation themes`)}
           </span>
         </div>
 
         {/* Designs Grid with Watermarked Protected Cards */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredDesigns.map((design) => {
+          {displayedDesigns.map((design) => {
             const name = lang === 'si' ? design.nameSi : design.name;
             const desc = lang === 'si' ? design.shortDescriptionSi : design.shortDescription;
 
@@ -212,6 +243,28 @@ export default function DesignGallery({ lang = 'en', translations, onOpenDemo })
             );
           })}
         </div>
+
+        {/* See More / Show Less Button */}
+        {hasMore && (
+          <div className="mt-12 text-center">
+            <button
+              type="button"
+              onClick={handleToggleShowAll}
+              className="neo-btn bg-neo-yellow hover:bg-[#FFE033] text-neo-black font-extrabold text-sm sm:text-base px-8 py-3.5 rounded-2xl inline-flex items-center gap-2.5 shadow-neo touch-target cursor-pointer transition-transform hover:-translate-y-0.5"
+            >
+              <span>
+                {showAll 
+                  ? t.showLess
+                  : `${t.seeMore} (${filteredDesigns.length - 6} ${lang === 'si' ? 'අමතර' : 'More'})`}
+              </span>
+              {showAll ? (
+                <ChevronUp size={18} className="stroke-[2.5]" />
+              ) : (
+                <ChevronDown size={18} className="stroke-[2.5]" />
+              )}
+            </button>
+          </div>
+        )}
 
       </div>
     </section>

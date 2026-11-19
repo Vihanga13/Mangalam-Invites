@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import WhyDigital from './components/WhyDigital';
 import DesignGallery from './components/DesignGallery';
-import HowItWorks from './components/HowItWorks';
 import Features from './components/Features';
-import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import InquiryForm from './components/InquiryForm';
 import Footer from './components/Footer';
@@ -45,12 +42,6 @@ export default function App() {
           onOpenDemo={handleOpenDemo}
         />
 
-        {/* Why Digital Section */}
-        <WhyDigital 
-          lang={lang} 
-          translations={translations} 
-        />
-
         {/* 15 Designs Gallery Section */}
         <DesignGallery 
           lang={lang} 
@@ -58,21 +49,8 @@ export default function App() {
           onOpenDemo={handleOpenDemo}
         />
 
-        {/* How It Works Section */}
-        <HowItWorks 
-          lang={lang} 
-          translations={translations} 
-        />
-
-
         {/* Features Icon Grid Section */}
         <Features 
-          lang={lang} 
-          translations={translations} 
-        />
-
-        {/* Testimonials Carousel Section */}
-        <Testimonials 
           lang={lang} 
           translations={translations} 
         />

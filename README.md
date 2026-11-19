@@ -153,8 +153,8 @@ In [`src/config/config.js`](./src/config/config.js):
 export const SOCIAL_LINKS = {
   instagram: "https://instagram.com/mangalam.invites",
   instagramHandle: "@mangalam.invites",
-  facebook: "https://facebook.com/mangalaminvites",
-  email: "hello@mangalaminvites.com",
+  facebook: "https://www.facebook.com/share/1a6wzDPywN/?mibextid=wwXIfr",
+  email: "hello.mangalaminvites@gmail.com",
   phoneDisplay: "+94 77 123 4567",
 };
 ```
@@ -222,4 +222,4 @@ The website is production-ready for Netlify:
 
 - Handcrafted with love in Sri Lanka 🇱🇰
 - **Mangalam Invites © 2026**. All rights reserved.
-- For business inquiries, contact: **hello@mangalaminvites.com**
+- For business inquiries, contact: **hello.mangalaminvites@gmail.com**

@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
-import { MessageCircle, Calculator, ShieldCheck, CheckSquare, Square, Zap } from 'lucide-react';
+import { MessageCircle, ShieldCheck, Zap } from 'lucide-react';
 import { DESIGNS } from '../config/designs';
-import { PACKAGES, ADDONS } from '../config/pricing';
+import { PACKAGES } from '../config/pricing';
 import { formatLKR, getWhatsAppUrl } from '../config/config';
 
 export default function InquiryForm({ lang = 'en', translations }) {
@@ -13,7 +13,6 @@ export default function InquiryForm({ lang = 'en', translations }) {
   const [venue, setVenue] = useState('');
   const [selectedDesignId, setSelectedDesignId] = useState(DESIGNS[1].id);
   const [selectedPackageId, setSelectedPackageId] = useState('standard');
-  const [selectedAddons, setSelectedAddons] = useState([]);
   const [message, setMessage] = useState('');
   const [formError, setFormError] = useState('');
 
@@ -27,36 +26,10 @@ export default function InquiryForm({ lang = 'en', translations }) {
     [selectedPackageId]
   );
 
-  // Live Price Calculation in LKR
+  // Live Price in LKR
   const estimatedTotal = useMemo(() => {
-    let subtotal = selectedPackage.price;
-
-    let rushSelected = false;
-    selectedAddons.forEach(addonId => {
-      const addon = ADDONS.find(a => a.id === addonId);
-      if (addon) {
-        if (addon.isRush) {
-          rushSelected = true;
-        } else {
-          subtotal += addon.calcPrice || 0;
-        }
-      }
-    });
-
-    if (rushSelected) {
-      subtotal = Math.round(subtotal * 1.25);
-    }
-
-    return subtotal;
-  }, [selectedPackage, selectedAddons]);
-
-  const toggleAddon = (addonId) => {
-    setSelectedAddons(prev => 
-      prev.includes(addonId) 
-        ? prev.filter(id => id !== addonId) 
-        : [...prev, addonId]
-    );
-  };
+    return selectedPackage.price;
+  }, [selectedPackage]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -66,11 +39,6 @@ export default function InquiryForm({ lang = 'en', translations }) {
     }
     setFormError('');
 
-    const addonNames = selectedAddons.map(id => {
-      const a = ADDONS.find(item => item.id === id);
-      return a ? (lang === 'si' ? a.nameSi : a.name) : id;
-    });
-
     const formattedMessage = [
       `*🌸 New Wedding Website Inquiry - Mangalam Invites 🌸*`,
       ``,
@@ -79,7 +47,6 @@ export default function InquiryForm({ lang = 'en', translations }) {
       `*Venue / Hotel:* ${venue || 'To be confirmed'}`,
       `*Selected Design:* ${selectedDesign.name} (${selectedDesign.priceRange})`,
       `*Package Tier:* ${selectedPackage.name} (${selectedPackage.priceDisplay})`,
-      `*Add-ons:* ${addonNames.length > 0 ? addonNames.join(', ') : 'None'}`,
       `*Estimated Total:* ${formatLKR(estimatedTotal)}`,
       message.trim() ? `*Special Notes:* ${message.trim()}` : null,
       ``,
@@ -217,43 +184,6 @@ export default function InquiryForm({ lang = 'en', translations }) {
               </div>
             </div>
 
-            {/* Optional Add-ons Checkboxes */}
-            <div>
-              <label className="block text-xs font-black uppercase tracking-wider text-neo-black mb-2">
-                {t.addonsLabel}
-              </label>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {ADDONS.map(addon => {
-                  const isChecked = selectedAddons.includes(addon.id);
-                  return (
-                    <div
-                      key={addon.id}
-                      onClick={() => toggleAddon(addon.id)}
-                      className={`p-3.5 rounded-xl border-2 border-neo-black flex items-center justify-between cursor-pointer transition-all touch-target user-select-none ${
-                        isChecked 
-                          ? 'bg-neo-mint shadow-neo-sm translate-x-0.5 translate-y-0.5 text-neo-black' 
-                          : 'bg-white hover:bg-stone-50 shadow-neo-sm text-stone-800'
-                      }`}
-                    >
-                      <div className="flex items-center gap-2.5">
-                        {isChecked ? (
-                          <CheckSquare size={20} className="text-neo-black stroke-[2.5]" />
-                        ) : (
-                          <Square size={20} className="text-stone-400" />
-                        )}
-                        <span className="text-xs font-extrabold">
-                          {lang === 'si' ? addon.nameSi : addon.name}
-                        </span>
-                      </div>
-                      <span className="neo-badge bg-white text-neo-black text-xs px-2 py-0.5 rounded shrink-0 ml-2">
-                        {addon.priceDisplay}
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-
             {/* Additional Message */}
             <div>
               <label htmlFor="notes" className="block text-xs font-black uppercase tracking-wider text-neo-black mb-1.5">
@@ -279,7 +209,7 @@ export default function InquiryForm({ lang = 'en', translations }) {
                   {formatLKR(estimatedTotal)}
                 </div>
                 <span className="text-xs font-bold text-stone-800 block mt-1">
-                  ({selectedPackage.name} + {selectedAddons.length} add-ons • 50% advance to start)
+                  ({lang === 'si' ? `${selectedPackage.nameSi || selectedPackage.name} පැකේජය • 50% ක අත්තිකාරම් මුදලක් සමඟින්` : `${selectedPackage.name} tier • 50% advance to start`})
                 </span>
               </div>
 

@@ -24,12 +24,9 @@ export default function Footer({ lang = 'en', translations }) {
 
   const quickLinks = [
     { href: '#designs', label: tNav.designs },
-    { href: '#why-digital', label: tNav.whyDigital },
-    { href: '#how-it-works', label: tNav.howItWorks },
     { href: '#features', label: tNav.features },
-    { href: '#reviews', label: tNav.reviews },
+    { href: '#calculator', label: tNav.calculator || (lang === 'si' ? 'මිල ගණනය කිරීම' : 'Cost Calculator') },
     { href: '#faq', label: tNav.faq },
-    { href: '#calculator', label: lang === 'si' ? 'මිල ගණනය කිරීම' : 'Cost Calculator' }
   ];
 
   const handleLinkClick = (e, href) => {
